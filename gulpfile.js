@@ -44,22 +44,19 @@ var path = {
     js: 'build/scripts/',
     css: 'build/styles/',
     img: 'build/images/',
-    fonts: 'build/fonts/',
     deploy: 'build/**/*'
   },
   src: {
-    html: 'src/html/*.html',
+    html: 'src/*.html',
     js: 'src/scripts/*.js',
     css: './src/styles/*.scss',
     img: 'src/images/**/**.*',
-    fonts: 'src/fonts/**/*.*',
   },
   watch: {
-    html: 'src/html/**/*.html',
+    html: 'src/**/*.html',
     js: 'src/scripts/**/*.js',
     css: 'src/styles/**/*.scss',
     img: 'src/images/*.*',
-    fonts: 'src/fonts/**/*.*',
   },
   clean: './build'
 };
@@ -111,12 +108,6 @@ gulp.task('img', function () {
     .pipe(reload({stream: true}));
 });
 
-// Copying fonts
-gulp.task('fonts', function() {
-  return gulp.src(path.src.fonts)
-    .pipe(gulp.dest(path.build.fonts))
-});
-
 // Clean
 gulp.task('clean', function () {
   return del(path.clean);
@@ -124,7 +115,7 @@ gulp.task('clean', function () {
 
 // Overall build
 gulp.task('build', function (cb) {
-  runSequence('clean', ['html', 'img', 'sass', 'js', 'fonts'], cb);
+  runSequence('clean', ['html', 'img', 'sass', 'js'], cb);
 });
 
 
@@ -141,13 +132,8 @@ var config = {
 gulp.task('browserSync', ['build'], function() {
   browserSync(config);
 });
-
-// Watching regime
-gulp.task('setWatch', function() {
-    global.isWatching = true;
-});
 // Overall watch
-gulp.task('watch', ['setWatch', 'browserSync'], function(){
+gulp.task('watch', ['browserSync'], function(){
   gulp.watch([path.watch.html], function(event, cb) {
     gulp.start('html');
   });
@@ -159,9 +145,6 @@ gulp.task('watch', ['setWatch', 'browserSync'], function(){
   });
   gulp.watch([path.watch.img], function(event, cb) {
     gulp.start('img');
-  });
-  gulp.watch([path.watch.fonts], function(event, cb) {
-    gulp.start('fonts');
   });
 });
 

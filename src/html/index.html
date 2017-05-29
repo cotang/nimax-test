@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <!-- Head-->
+  <head>
+    <!-- Main Meta information-->
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="Nimax-test">
+    <meta name="author" content="">
+    <title>Nimax-test</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <section class="basket">
+      <div class="container">
+        <h2 class="basket__title">Корзина</h2>
+        <form class="basket__form">
+          <table class="basket__table">
+            <thead class="basket__head">
+              <tr>
+                <th>Наименование</th>
+                <th>Габариты, мм</th>
+                <th>Вес, кг</th>
+                <th>Цена, руб.</th>
+                <th>Количество</th>
+                <th>Стоимость, руб.</th>
+                <th>
+                  <a class="delete-all" href="#">Удалить все</a>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="basket-item">
+                <th class="basket-item__name">Товар 1</th>
+                <td class="basket-item__dimensions">800х1000х495</td>
+                <td class="basket-item__weight">47</td>
+                <td class="basket-item__price">15100</td>
+                <td class="basket-item__counter">
+                  <a class="less" href="#" title="уменьшить количество">-</a>
+                  <input class="basket-item__amount" type="text" value="0" name="amount">
+                  <a class="more" href="#" title="увеличить количество">+</a>
+                </td>
+                <td class="basket-item__cost">-</td>
+                <td class="basket-item__delete">
+                  <a class="delete" href="#">Удалить</a>
+                </td>
+              </tr>
+              <tr class="basket-item">
+                <th class="basket-item__name">Товар 2 c длинным названием</th>
+                <td class="basket-item__dimensions">800х1000х485</td>
+                <td class="basket-item__weight">47</td>
+                <td class="basket-item__price">15500</td>
+                <td class="basket-item__counter">
+                  <a class="less" href="#" title="уменьшить количество">-</a>
+                  <input class="basket-item__amount" type="text" value="7" name="amount">
+                  <a class="more" href="#" title="увеличить количество">+</a>
+                </td>
+                <td class="basket-item__cost">108500</td>
+                <td class="basket-item__delete">
+                  <a class="delete" href="#">Удалить</a>
+                </td>
+              </tr>
+              <tr class="basket-item">
+                <th class="basket-item__name">Товар 3</th>
+                <td class="basket-item__dimensions">25х915х375</td>
+                <td class="basket-item__weight">3</td>
+                <td class="basket-item__price">660</td>
+                <td class="basket-item__counter">
+                  <a class="less" href="#" title="уменьшить количество">-</a>
+                  <input class="basket-item__amount" type="text" value="5" name="amount">
+                  <a class="more" href="#" title="увеличить количество">+</a>
+                </td>
+                <td class="basket-item__cost">3300</td>
+                <td class="basket-item__delete">
+                  <a class="delete" href="#">Удалить</a>
+                </td>
+              </tr>
+              <tr class="basket-item">
+                <th class="basket-item__name">Товар 4 c длинным названием</th>
+                <td class="basket-item__dimensions">800х1000х485</td>
+                <td class="basket-item__weight">47</td>
+                <td class="basket-item__price">15500</td>
+                <td class="basket-item__counter">
+                  <a class="less" href="#" title="уменьшить количество">-</a>
+                  <input class="basket-item__amount" type="text" value="7" name="amount">
+                  <a class="more" href="#" title="увеличить количество">+</a>
+                </td>
+                <td class="basket-item__cost">108500</td>
+                <td class="basket-item__delete">
+                  <a class="delete" href="#">Удалить</a>
+                </td>
+              </tr>
+              <tr class="basket-item">
+                <th class="basket-item__name">Товар 5</th>
+                <td class="basket-item__dimensions">25х915х375</td>
+                <td class="basket-item__weight">3</td>
+                <td class="basket-item__price">660</td>
+                <td class="basket-item__counter">
+                  <a class="less" href="#" title="уменьшить количество">-</a>
+                  <input class="basket-item__amount" type="text" value="5" name="amount">
+                  <a class="more" href="#" title="увеличить количество">+</a>
+                </td>
+                <td class="basket-item__cost">3300</td>
+                <td class="basket-item__delete">
+                  <a class="delete" href="#">Удалить</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="basket-total">
+            <div class="basket-total__line">
+              <span class="basket-total__text">Цена
+                <a href="#">со скидкой <span class="discount">5%</span></a>
+              </span>
+              <span class="basket-total__cost  basket-total__cost--discount">106 210 р</span>
+            </div>
+            <div class="basket-total__line">
+              <span class="basket-total__text">Без скидки</span>
+              <span class="basket-total__cost  basket-total__cost--no-discount">111 800 р</span>
+            </div>
+            <div class="basket-total__line">
+              <button type="submit">Оформить заказ</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <script src="js/script.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,124 @@
+.basket{
+  width: 1250px;
+  margin: 0 auto;
+  &__title{
+    margin: 20px 0 20px;
+    font-family: Roboto, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 1.5;
+    color: $red;
+  }
+  &__table{
+    width: 100%;
+    text-align: left;
+  }
+  &__head{
+    font-size: 14px;
+    background-color: $grey;
+    white-space: nowrap;
+    th{
+      padding: 17px 10px;
+    }
+  }
+}
+
+.basket-item{
+  &--bg{
+    background-color: $bg-grey;
+  }
+  td{
+    padding: 25px 10px;
+  }
+  th{
+    padding: 25px 20px;
+  }
+  &__name{
+    font-size: 18px;
+    text-decoration: underline;
+  }
+  &__counter{
+    input{
+      display: inline-block;
+      vertical-align: bottom;
+      max-width: 50px;
+      height: 30px;
+      border-radius: 2px;
+      border: 1px solid #eee;
+      padding: 3px;
+      box-shadow: inset 0 1px 1px 0 rgba(#ddd, 0.5)
+    }
+  }
+  &__delete{
+    font-size: 14px;
+  }
+}
+
+.less, .more{
+  display: inline-block;
+  vertical-align: bottom;
+  text-align: center;
+  width: 20px;
+  height: 30px;
+  line-height: 30px;
+  background-color: $red;
+  border-radius: 2px;
+  font-size: 18px;
+  color: #fff;
+  &:hover, &:focus{
+    background-color: darken($red, 7%);
+  }
+  &:active{
+    background-color: darken($red, 15%);
+  }
+  &--unactive{
+    background-color: $light-grey;
+    &:hover, &:focus{
+      background-color: $light-grey;
+    }
+    &:active{
+      background-color: $light-grey;
+    }
+  }
+}
+
+.basket-total{
+  width: 500px;
+  font-size: 14px;
+  margin-left: auto;
+  &__line{
+    padding: 5px 0;
+  }
+  &__text{
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+  }
+  &__cost{
+    display: inline-block;
+    width: 200px;
+    padding: 0 20px;
+    &--discount{
+      font-size: 30px;
+      font-weight: bold;
+    }
+  }
+}
+
+button[type='submit']{
+  background-color: $red;
+  color: #fff;
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  padding: 15px 50px;
+  border-radius: 5px;
+  margin-top: 10px;
+  &:hover, &:focus{
+    background-color: darken($red, 7%);
+  }
+  &:active{
+    background-color: darken($red, 15%);
+  }
+}

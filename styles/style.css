@@ -409,7 +409,6 @@ img {
   margin: 0 auto; }
   .basket__title {
     margin: 20px 0 20px;
-    font-family: Roboto, Arial, sans-serif;
     font-weight: bold;
     font-size: 60px;
     line-height: 1.5;
@@ -450,7 +449,8 @@ img {
 .basket-item__delete {
   font-size: 14px; }
 
-.less, .more {
+.btn {
+  border-bottom: none;
   display: inline-block;
   vertical-align: bottom;
   text-align: center;
@@ -461,15 +461,15 @@ img {
   border-radius: 2px;
   font-size: 18px;
   color: #fff; }
-  .less:hover, .less:focus, .more:hover, .more:focus {
+  .btn:hover, .btn:focus {
     background-color: #af1b25; }
-  .less:active, .more:active {
+  .btn:active {
     background-color: #8c161e; }
-  .less--unactive, .more--unactive {
+  .btn--unactive {
     background-color: #d6d7d9; }
-    .less--unactive:hover, .less--unactive:focus, .more--unactive:hover, .more--unactive:focus {
+    .btn--unactive:hover, .btn--unactive:focus {
       background-color: #d6d7d9; }
-    .less--unactive:active, .more--unactive:active {
+    .btn--unactive:active {
       background-color: #d6d7d9; }
 
 .basket-total {
@@ -493,7 +493,6 @@ img {
 button[type='submit'] {
   background-color: #ce202c;
   color: #fff;
-  font-family: Roboto, Arial, sans-serif;
   font-weight: bold;
   font-size: 16px;
   border: none;

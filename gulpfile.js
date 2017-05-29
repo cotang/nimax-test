@@ -41,24 +41,24 @@ const ghPages = require('gulp-gh-pages');
 var path = {
   build: {
     html: 'build',
-    js: 'build/js/',
-    css: 'build/css/',
-    img: 'build/img/',
+    js: 'build/scripts/',
+    css: 'build/styles/',
+    img: 'build/images/',
     fonts: 'build/fonts/',
     deploy: 'build/**/*'
   },
   src: {
     html: 'src/html/*.html',
-    js: 'src/js/*.js',
-    css: './src/css/*.scss',
-    img: ['src/img/**/**.*', '!src/img/png-sprite/*.*', '!src/img/svg-sprite/*.*'],
+    js: 'src/scripts/*.js',
+    css: './src/styles/*.scss',
+    img: 'src/images/**/**.*',
     fonts: 'src/fonts/**/*.*',
   },
   watch: {
     html: 'src/html/**/*.html',
-    js: 'src/js/**/*.js',
-    css: 'src/css/**/*.scss',
-    img: 'src/img/*.*',
+    js: 'src/scripts/**/*.js',
+    css: 'src/styles/**/*.scss',
+    img: 'src/images/*.*',
     fonts: 'src/fonts/**/*.*',
   },
   clean: './build'

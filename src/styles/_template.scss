@@ -17,9 +17,7 @@ body {
   margin: 0;
   background-color: $body-bg;
   color: $text-color;
-
   font-size: $font-size;
-  // line-height: $line-height;
   font-family: Arial, sans-serif;
 }
 
@@ -31,15 +29,9 @@ a {
   @include transition();
 
   &:hover, &:focus {
-    // color: $link-color;
     border-bottom: none;
   }
-  &:active {
-    // color: $link-color-active;
-  }
-  // &:visited{
-  //   color: $dark-blue;
-  // }
+
 }
 
 button, input[type="submit"]{

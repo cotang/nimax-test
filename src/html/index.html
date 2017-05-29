@@ -13,7 +13,7 @@
     <meta name="author" content="">
     <title>Nimax-test</title>
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="styles/style.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   </head>
   <body>
@@ -37,14 +37,14 @@
             </thead>
             <tbody>
               <tr class="basket-item">
-                <th class="basket-item__name">Товар 1</th>
+                <th class="basket-item__name">Товар 1<input type="hidden" name="id1" value="Товар 1"></th>
                 <td class="basket-item__dimensions">800х1000х495</td>
                 <td class="basket-item__weight">47</td>
                 <td class="basket-item__price">15100</td>
                 <td class="basket-item__counter">
-                  <a class="less" href="#" title="уменьшить количество">-</a>
-                  <input class="basket-item__amount" type="text" value="0" name="amount">
-                  <a class="more" href="#" title="увеличить количество">+</a>
+                  <a class="btn btn--less btn--unactive" href="#" title="уменьшить количество">-</a>
+                  <input class="basket-item__amount" type="text" value="0" name="amount1">
+                  <a class="btn btn--more" href="#" title="увеличить количество">+</a>
                 </td>
                 <td class="basket-item__cost">-</td>
                 <td class="basket-item__delete">
@@ -52,14 +52,14 @@
                 </td>
               </tr>
               <tr class="basket-item">
-                <th class="basket-item__name">Товар 2 c длинным названием</th>
+                <th class="basket-item__name">Товар 2 c длинным названием<input type="hidden" name="id2" value="Товар 2"></th>
                 <td class="basket-item__dimensions">800х1000х485</td>
                 <td class="basket-item__weight">47</td>
                 <td class="basket-item__price">15500</td>
                 <td class="basket-item__counter">
-                  <a class="less" href="#" title="уменьшить количество">-</a>
-                  <input class="basket-item__amount" type="text" value="7" name="amount">
-                  <a class="more" href="#" title="увеличить количество">+</a>
+                  <a class="btn btn--less" href="#" title="уменьшить количество">-</a>
+                  <input class="basket-item__amount" type="text" value="7" name="amount2">
+                  <a class="btn btn--more" href="#" title="увеличить количество">+</a>
                 </td>
                 <td class="basket-item__cost">108500</td>
                 <td class="basket-item__delete">
@@ -67,14 +67,14 @@
                 </td>
               </tr>
               <tr class="basket-item">
-                <th class="basket-item__name">Товар 3</th>
+                <th class="basket-item__name">Товар 3<input type="hidden" name="id3" value="Товар 3"></th>
                 <td class="basket-item__dimensions">25х915х375</td>
                 <td class="basket-item__weight">3</td>
                 <td class="basket-item__price">660</td>
                 <td class="basket-item__counter">
-                  <a class="less" href="#" title="уменьшить количество">-</a>
-                  <input class="basket-item__amount" type="text" value="5" name="amount">
-                  <a class="more" href="#" title="увеличить количество">+</a>
+                  <a class="btn btn--less" href="#" title="уменьшить количество">-</a>
+                  <input class="basket-item__amount" type="text" value="5" name="amount3">
+                  <a class="btn btn--more" href="#" title="увеличить количество">+</a>
                 </td>
                 <td class="basket-item__cost">3300</td>
                 <td class="basket-item__delete">
@@ -82,14 +82,14 @@
                 </td>
               </tr>
               <tr class="basket-item">
-                <th class="basket-item__name">Товар 4 c длинным названием</th>
+                <th class="basket-item__name">Товар 4 c длинным названием<input type="hidden" name="id4" value="Товар 4"></th>
                 <td class="basket-item__dimensions">800х1000х485</td>
                 <td class="basket-item__weight">47</td>
                 <td class="basket-item__price">15500</td>
                 <td class="basket-item__counter">
-                  <a class="less" href="#" title="уменьшить количество">-</a>
-                  <input class="basket-item__amount" type="text" value="7" name="amount">
-                  <a class="more" href="#" title="увеличить количество">+</a>
+                  <a class="btn btn--less" href="#" title="уменьшить количество">-</a>
+                  <input class="basket-item__amount" type="text" value="7" name="amount4">
+                  <a class="btn btn--more" href="#" title="увеличить количество">+</a>
                 </td>
                 <td class="basket-item__cost">108500</td>
                 <td class="basket-item__delete">
@@ -97,14 +97,14 @@
                 </td>
               </tr>
               <tr class="basket-item">
-                <th class="basket-item__name">Товар 5</th>
+                <th class="basket-item__name">Товар 5<input type="hidden" name="id5" value="Товар 5"></th>
                 <td class="basket-item__dimensions">25х915х375</td>
                 <td class="basket-item__weight">3</td>
                 <td class="basket-item__price">660</td>
                 <td class="basket-item__counter">
-                  <a class="less" href="#" title="уменьшить количество">-</a>
-                  <input class="basket-item__amount" type="text" value="5" name="amount">
-                  <a class="more" href="#" title="увеличить количество">+</a>
+                  <a class="btn btn--less" href="#" title="уменьшить количество">-</a>
+                  <input class="basket-item__amount" type="text" value="5" name="amount5">
+                  <a class="btn btn--more" href="#" title="увеличить количество">+</a>
                 </td>
                 <td class="basket-item__cost">3300</td>
                 <td class="basket-item__delete">
@@ -131,6 +131,6 @@
         </form>
       </div>
     </section>
-    <script src="js/script.min.js"></script>
+    <script src="scripts/script.min.js"></script>
   </body>
 </html>

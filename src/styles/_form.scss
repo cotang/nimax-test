@@ -28,6 +28,7 @@
   }
   td{
     padding: 25px 10px;
+
   }
   th{
     padding: 25px 20px;
@@ -35,8 +36,16 @@
   &__name{
     font-size: 18px;
     text-decoration: underline;
+    a{
+      border-bottom: none;
+      color: $text-color;
+      &:hover, &:focus{
+        color: $red;
+      }
+    }
   }
   &__counter{
+    min-width: 120px;
     input{
       display: inline-block;
       vertical-align: bottom;

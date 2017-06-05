@@ -18,7 +18,7 @@ jQuery(document).ready(function ($) {
                 if (val > limit) {
                     val = +val + 1*action;
                 }
-                if (val == 0) {
+                if (val <= 0) {
                     $(this).closest(".basket-item__counter").find(".btn--less").addClass("btn--unactive");
                 } else {
                     $(this).closest(".basket-item__counter").find(".btn--less").removeClass("btn--unactive");
@@ -36,8 +36,42 @@ jQuery(document).ready(function ($) {
     /* изменение количества товара при изменении value у input */
     $(".basket-item__amount").change(function (e) {
         e.preventDefault();
+        if ($(this).val().match(/[^0-9]/g)) {
+            $(this).val(0);
+            $(this).closest(".basket-item__counter").find(".btn--less").addClass("btn--unactive");
+        }
+        if ($(this).val() <= 0) {
+            $(this).val(0);
+            $(this).closest(".basket-item__counter").find(".btn--less").addClass("btn--unactive");
+        } else if ($(this).val() > 999) {
+            $(this).val(999);
+            $(this).closest(".basket-item__counter").find(".btn--less").removeClass("btn--unactive");
+        } else {
+            $(this).closest(".basket-item__counter").find(".btn--less").removeClass("btn--unactive");
+        }
+        // correctInputValue($(this))
         countCost();
     });
+
+
+    /* корректировка значений в input */
+    // function correctInputValue(input) {
+    //     if (input.val().match(/[^0-9]/g)) {
+    //         input.val(0);
+    //         input.closest(".basket-item__counter").find(".btn--less").addClass("btn--unactive");
+    //     }
+    //     if (input.val() <= 0) {
+    //         input.val(0);
+    //         input.closest(".basket-item__counter").find(".btn--less").addClass("btn--unactive");
+    //     } else if ($(this).val() > 999) {
+    //         input.val(999);
+    //         input.closest(".basket-item__counter").find(".btn--less").removeClass("btn--unactive");
+    //     } else {
+    //         input.closest(".basket-item__counter").find(".btn--less").removeClass("btn--unactive");
+    //     }
+    //     // return input;
+    // }
+
 
 
     /* добавление пробелов в разрядах */
@@ -66,12 +100,13 @@ jQuery(document).ready(function ($) {
             var basketItemPrice = $(this).find(".basket-item__price").text().replace(/\D/g, "");
             var basketItemAmount = $(this).find(".basket-item__amount").val();
             var basketItemCost = basketItemPrice*basketItemAmount;
-            basketTotalCost += basketItemCost;
             if (basketItemCost <= 0) {
                 $(this).find(".basket-item__cost").text("-");
+                basketItemCost = 0;
             } else {
                 $(this).find(".basket-item__cost").text(addSpacesToNumbers(basketItemCost));
             }
+            basketTotalCost += basketItemCost;
         });
         countTotal(basketTotalCost);
     }
@@ -116,8 +151,7 @@ jQuery(document).ready(function ($) {
     /* ссылка удалить все */
     $(".delete-all").click(function (e) {
         e.preventDefault();
-        $(".basket-item").remove();
-        countCost();
+        $(".basket__form").remove();
     });
 
 
